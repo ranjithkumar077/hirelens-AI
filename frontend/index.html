@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireLens AI — JD × Resume Alignment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <canvas id="grid"></canvas>
+  <header>
+    <div class="brand">HireLens AI</div>
+    <p class="tagline">AI-powered JD × Resume Alignment</p>
+  </header>
+
+  <main>
+    <section class="card upload-card">
+      <h2>Upload</h2>
+      <label>Job Description (PDF / DOCX / TXT)</label>
+      <input id="jdFile" type="file" accept=".pdf,.docx,.txt" />
+      <textarea id="jdText" placeholder="Or paste the JD here..."></textarea>
+
+      <label>Resume(s) — one or multiple</label>
+      <input id="resumeFiles" type="file" accept=".pdf,.docx,.txt" multiple />
+      <button id="analyzeBtn" type="button">Analyze alignment</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section id="results" class="hidden"></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
